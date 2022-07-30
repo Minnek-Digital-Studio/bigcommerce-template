@@ -1,0 +1,9 @@
+name: Theme Check
+
+on:
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  theme_check:
+    uses: Minnek-Digital-Studio/bigcommerce-theme-action/.github/workflows/theme-check.yml@master
