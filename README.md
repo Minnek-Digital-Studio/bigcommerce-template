@@ -53,6 +53,7 @@ Project name description.
 * Setup Stencil CLI: `stencil init`. Enter the credentials.
 * Download the BigCommerce Cornerstone 6+ theme from the store: `stencil download`
 * Install these extra dependencies: `npm i -D husky @commitlint/config-conventional @commitlint/cli cypress cli-color`
+* Run husky setup: `npx husky install`
 * Install the theme dependencies: `npm install`
 
 Add these script to the `package.json` file:
