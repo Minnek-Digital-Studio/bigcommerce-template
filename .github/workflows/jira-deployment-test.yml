@@ -1,0 +1,16 @@
+name: Deployment to Test
+
+on:
+  push:
+    branches:
+      - 'test/*'
+      - 'test'
+      - 'testing'
+      - 'staging'
+
+jobs:
+  deployment-test:
+    uses: Minnek-Digital-Studio/jira-action/.github/workflows/jira-deployment-test.yml@master
+    secrets:
+      CLIENT_ID: ${{ secrets.JIRA_CLIENT_ID }}
+      CLIENT_SECRET: ${{ secrets.JIRA_CLIENT_SECRET }}

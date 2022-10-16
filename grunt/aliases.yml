@@ -1,0 +1,15 @@
+---
+check:js:
+  - eslint
+  - run:jest
+
+check:css:
+  - stylelint
+
+check:schema:
+  - run:schemaTest
+
+check:
+  - check:schema
+  - check:js
+  - check:css
