@@ -8,7 +8,13 @@
         "es6": true,
         "browser": true
     },
-    "extends": "airbnb/base",
+    "extends": [
+        "airbnb/base",
+        "plugin:cypress/recommended"
+    ],
+    "plugins": [
+        "cypress"
+    ],
     "rules": {
         "indent": [
             2,

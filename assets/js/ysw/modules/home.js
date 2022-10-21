@@ -6,20 +6,12 @@ import PageManager from '../../theme/page-manager';
  * @since 1.0.0
  * @author YourStoreWizards
  */
-class YswHome extends PageManager {
+export default class YswHome extends PageManager {
     onReady() {
         this.init();
     }
 
     init() {
         // Remove this if other methods are added to this class
-    }
-}
-
-export default function YswHomeFactory(context) {
-    if (this instanceof YswHome) {
-        this.context = context;
-    } else {
-        return new YswHome(context);
     }
 }

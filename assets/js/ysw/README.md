@@ -25,3 +25,11 @@ function getProduct() {}
 
 const productPrice = () => {}
 ```
+
+## Folder Structure
+
+* **addons:** reserved only for addons installations.
+* **cmd:** for executing console scripts for automation tasks.
+* **components:** for custom components.
+* **modules:** for product, category, global code modules.
+* **widgets:** reserved only for custom widgets.

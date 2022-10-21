@@ -51,8 +51,8 @@ Project name description.
 ### Cornerstone 6+ Only
 
 * Setup Stencil CLI: `stencil init`. Enter the credentials.
-* Download the BigCommerce Cornerstone 6+ theme from the store: `stencil download`
-* Install these extra dependencies: `npm i -D husky @commitlint/config-conventional @commitlint/cli cypress cli-color`
+* Download the BigCommerce Cornerstone 6+ theme from the store: `stencil download`. Be sure the store has the latest version of Cornerstone.
+* Install extra dependencies: `npm i -D husky @commitlint/config-conventional @commitlint/cli cypress eslint-plugin-cypress cli-color`
 * Run husky setup: `npx husky install`
 * Install the theme dependencies: `npm install`
 
@@ -63,26 +63,32 @@ Add these script to the `package.json` file:
 
 ### Code Owners
 
-* Define who is the code owner of the project. Sometimes the code owner is the project lead or maybe the team lead of your team, this info can be find it in the jira project, learn more about [code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
+* Define who is the code owner of the project. Sometimes the code owner is the project lead or maybe the team lead of your team, this info can find it in the Jira project, learn more about [code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners).
 
 ### CSS
 
-* Add the code below to the end of the file `theme.scss`.
+* Add the code below to the end of the file `/assets/scss/theme.scss`.
 
 ```scss
-@import "ysw/settings";
-@import "ysw/tools";
-@import "ysw/generic";
-@import "ysw/elements";
-@import "ysw/components";
-@import "ysw/layouts";
-@import "ysw/utilities";
-@import "ysw/vendor";
+@import "ysw/settings/settings";
+@import "ysw/tools/tools";
+@import "ysw/generic/generic";
+@import "ysw/elements/elements";
+@import "ysw/components/components";
+@import "ysw/layouts/layouts";
+@import "ysw/utilities/utilities";
+@import "ysw/vendor/vendor";
 ```
+
+* You can find the folder structure in `/assets/scss/ysw`, folder have the explanation.
+
+### JavaScript
+
+* The javascript files structure are in `/assets/js/ysw/`. The only thing you need to do is to import the modules files into the big commerce corresponding modules page.
 
 ### Templates Structure
 
-* All the templates for development are in `/templates/ysw`. Every folder have the explanation.
+* All the templates for development are in `/templates/ysw`. The folder has a readme file with an explanation.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

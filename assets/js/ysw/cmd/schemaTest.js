@@ -25,8 +25,8 @@
 
     const limitCharacters = 64;
 
-    const config = require('./../../../config.json');
-    const schema = require('./../../../schema.json');
+    const config = require('./../../../../config.json');
+    const schema = require('./../../../../schema.json');
 
     const keys = [];
     const inputTypes = [
@@ -40,6 +40,7 @@
         'paragraph',
         'optimizedCheckout-image',
         'input',
+        'sort',
     ];
 
     schema.forEach((group, i) => {
