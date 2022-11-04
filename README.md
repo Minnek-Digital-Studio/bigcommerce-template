@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://www.lonestarwesterndecor.com/">
+  <a href="https://example.com/">
     <img src="https://via.placeholder.com/300x200/fff/000.png" alt="Logo">
   </a>
 
@@ -11,10 +11,10 @@
   BigCommerce Storefront Theme
   <p align="center">
     <br />
-    <a href="https://minnek.atlassian.net/l/cp/gAkNFePM"><strong>Explore the docs »</strong></a>
+    <a href="https://minnek.atlassian.net/wiki/spaces/{JIRA-KEY}/overview"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://project-name-url.com/">View Demo</a>
+    <a href="https://example.com/">View Demo</a>
     ·
     <a href="https://minnek.atlassian.net/jira/software/projects/{JIRA-KEY}/issues/">Report Bug</a>
     ·
@@ -28,7 +28,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="#installation">Installation and Setup Guide</a></li>
+    <li><a href="#installation-and-setup-guide">Installation and Setup Guide</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contributing">Stack</a></li>
@@ -80,7 +80,7 @@ Add these script to the `package.json` file:
 @import "ysw/vendor/vendor";
 ```
 
-* You can find the folder structure in `/assets/scss/ysw`, folder have the explanation.
+* You can find the folder structure in `/assets/scss/ysw`. The folder have the explanation.
 
 ### JavaScript
 
