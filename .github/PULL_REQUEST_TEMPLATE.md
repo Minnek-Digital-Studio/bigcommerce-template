@@ -1,26 +1,22 @@
 #### Issue Info
 
-- Issue ID
-- https://minnek.atlassian.net/browse/{ISSUE-ID}
+[![Jira](https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=Jira&logoColor=white)](https://minnek.atlassian.net/browse/{JIRA-ID})
 
-### Code Review Checklist
+### Code Review Checklist for Authors
 
-- [ ] Update your branch with latest changes from `develop`
-- [ ] Verify all the checks are passed (if applicable)
-- [ ] Use clean code practices
-- [ ] Everything sorted alphabetically
-- [ ] Use `rem` not `px`
-- [ ] Instructions for how reviewers can test the code locally
-- [ ] Screenshot of the feature/bug fix (if applicable)
-- [ ] If any new text is added, it's internationalized, use `lang` function
-- [ ] Any new elements have aria labels (accessibility)
-- [ ] No unintentional `console.logs` left behind after debugging
-- [ ] Did I use the clear and concise names for variables and functions?
-- [ ] Did I explain all possible solutions and why I chose the one I did?
-- [ ] Added any comments to make new functions clearer
-- [ ] Comment the code if it's really needed (the code show be self-explained)
-- [ ] Added PR labels
-- [ ] Update any history/changelog file
+- [ ] Update your branch with the latest changes from `develop`.
+- [ ] Verify all the `checks` are passed (if applicable).
+- [ ] Use [code conventions](https://en.wikipedia.org/wiki/Coding_conventions) and [best practices](https://en.wikipedia.org/wiki/Best_practice).
+- [ ] New features must have compatibility for a11y (Accessibility).
+- [ ] No unintentional `console.logs` left behind after debugging.
+- [ ] Notify the code reviewers on time to have an efficient review time.
+
+### Code Review Checklist for Reviewers
+
+- [ ] Take some time to understand the code you are reading.
+- [ ] Use an inquisitive tone, do not make an order.
+- [ ] Accept that many programming decisions are opinions. Engage a discussion and reach a resolution quickly.
+- [ ] Seek to understand the author’s perspective.
 
 >**In case something is not applied, justify the reason why you skip one of the points above**
 
