@@ -28,7 +28,7 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
-    <li><a href="#installation">Installation and Setup Guide</a></li>
+    <li><a href="#installation-and-setup-guide">Installation and Setup Guide</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contributing">Stack</a></li>
