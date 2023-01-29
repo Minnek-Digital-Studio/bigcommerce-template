@@ -3,18 +3,18 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://www.lonestarwesterndecor.com/">
+  <a href="https://store-url.com/">
     <img src="https://via.placeholder.com/300x200/fff/000.png" alt="Logo">
   </a>
 
   <h3 align="center">Project Name</h3>
-  BigCommerce Storefront Theme
+  <p align="align">BigCommerce Storefront Theme</p>
   <p align="center">
     <br />
-    <a href="https://minnek.atlassian.net/l/cp/gAkNFePM"><strong>Explore the docs »</strong></a>
+    <a href="https://minnek.atlassian.net/wiki/spaces/{JIRA-KEY}/overview"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://project-name-url.com/">View Demo</a>
+    <a href="https://store-url.com/">View Demo</a>
     ·
     <a href="https://minnek.atlassian.net/jira/software/projects/{JIRA-KEY}/issues/">Report Bug</a>
     ·
@@ -39,7 +39,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Project Name](https://via.placeholder.com/1200x800/fff/000.png) <!-- meta image path: meta/desktop_light.png -->
+<!-- meta image path: meta/desktop_light.png -->
+![Project Name](https://via.placeholder.com/1200x800/fff/000.png)
 
 Project name description.
 
@@ -52,14 +53,13 @@ Project name description.
 
 * Setup Stencil CLI: `stencil init`. Enter the credentials.
 * Download the BigCommerce Cornerstone 6+ theme from the store: `stencil download`. Be sure the store has the latest version of Cornerstone.
+* Add these commands to the `package.json` file:
+    * `"dev": "stencil start -o"`. Start the stencil server and open the browser automatically.
+    * `"push": "stencil push -a -d -c 1"`. Push the theme to the live store and active it (only for stores in development mode).
+    * `"cy:open": "cypress open"`. Open cypress app and setup the environment.
+    * `"postinstall": "husky install"`. Run husky setup.
 * Install extra dependencies: `npm i -D husky @commitlint/config-conventional @commitlint/cli cypress eslint-plugin-cypress cli-color`
-* Run husky setup: `npx husky install`
 * Install the theme dependencies: `npm install`
-
-Add these script to the `package.json` file:
-* `"dev": "stencil start -o"`. Start the stencil server and open the browser automatically.
-* `"push": "stencil push -a -d -c 1"`. Push the theme to the live store and active it (only for stores in development mode).
-* `"cy:open": "cypress open"`. Open cypress app and setup the environment.
 
 ### Code Owners
 
