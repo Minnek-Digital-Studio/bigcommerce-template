@@ -3,7 +3,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://store-url.com/">
+  <a href="https://example.com/">
     <img src="https://via.placeholder.com/300x200/fff/000.png" alt="Logo">
   </a>
 
@@ -14,7 +14,7 @@
     <a href="https://minnek.atlassian.net/wiki/spaces/{JIRA-KEY}/overview"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://store-url.com/">View Demo</a>
+    <a href="https://example.com/">View Demo</a>
     ·
     <a href="https://minnek.atlassian.net/jira/software/projects/{JIRA-KEY}/issues/">Report Bug</a>
     ·
@@ -80,7 +80,7 @@ Project name description.
 @import "ysw/vendor/vendor";
 ```
 
-* You can find the folder structure in `/assets/scss/ysw`, folder have the explanation.
+* You can find the folder structure in `/assets/scss/ysw`. The folder have the explanation.
 
 ### JavaScript
 

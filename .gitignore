@@ -10,8 +10,7 @@ vendor/bundle/
 *.js.map
 *.zip
 .idea/
-.vscode/
-!.vscode/extensions.json
+.vscode/settings.json
 assets/dist/
 parsed/
 manifest.json
