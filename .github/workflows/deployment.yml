@@ -1,0 +1,21 @@
+name: Deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit-message:
+        description: 'Enter the Jira Keys that are ready merged in this release.'
+        required: true
+        default: false
+        type: string
+
+jobs:
+  deployment:
+    uses: Minnek-Digital-Studio/bigcommerce-theme-action/.github/workflows/deployment.yml@master
+    with:
+      jira-keys: ${{ inputs.commit-message }}
+    secrets:
+      URL: ${{ secrets.STENCIL_STORE_URL_PRODUCTION }}
+      TOKEN: ${{ secrets.STENCIL_ACCESS_TOKEN_PRODUCTION }}
+      CLIENT_ID: ${{ secrets.JIRA_CLIENT_ID }}
+      CLIENT_SECRET: ${{ secrets.JIRA_CLIENT_SECRET }}

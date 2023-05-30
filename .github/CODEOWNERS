@@ -4,4 +4,4 @@
 # review when someone opens a pull request.
 #
 # Change the owner's username with the project lead.
-*     @global-owner1
+* @global-owner1
