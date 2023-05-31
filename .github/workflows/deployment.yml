@@ -19,3 +19,4 @@ jobs:
       TOKEN: ${{ secrets.STENCIL_ACCESS_TOKEN_PRODUCTION }}
       CLIENT_ID: ${{ secrets.JIRA_CLIENT_ID }}
       CLIENT_SECRET: ${{ secrets.JIRA_CLIENT_SECRET }}
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
