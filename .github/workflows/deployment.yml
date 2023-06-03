@@ -1,11 +1,13 @@
 name: Deployment
 
-on: [push]
+on: 
+  push:
+    branches:
+      - master
+      - 'test/**'
 
 jobs:
   deployment:
     uses: Minnek-Digital-Studio/bigcommerce-action/.github/workflows/deployment.yml@master
-    secrets:
-      URL: ${{ secrets.STENCIL_STORE_URL_PRODUCTION }}
-      TOKEN: ${{ secrets.STENCIL_ACCESS_TOKEN_PRODUCTION }}
-      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    secrets: inherit
+    
