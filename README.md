@@ -63,7 +63,16 @@ Edit this readme file and replace the `{JIRA-KEY}` keyword with related project 
     * `"cy:run": "cypress run"`. Run cypress commands in the background.
     * `"postinstall": "husky install"`. Run husky setup.
 * Install extra dependencies: `npm i -D husky @commitlint/config-conventional @commitlint/cli cypress eslint-plugin-cypress cli-color`
-* Install the theme dependencies: `npm install`
+
+Add the commands below in the scripts section of the `package.json`:
+
+```json
+"dev": "stencil start -o",
+"push": "stencil push -a -d -c 1",
+"cy:open": "cypress open",
+"cy:run": "cypress run",
+"postinstall": "husky install"
+```
 
 ### Code Owners
 
