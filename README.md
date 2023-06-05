@@ -48,23 +48,27 @@ Project name description.
 <!-- INSTALLATION -->
 ## Installation and Setup Guide
 
+### Prepare
+
+Before to start using this template be sure you have an empty repository. Then you can initialize this command in your terminal:
+
+```bash
+curl -o- https://raw.githubusercontent.com/minnek-digital-studio/bigcommerce-template/master/setup.sh | bash
+```
+
+This command will:
+- Download the latest version of cornerstone and will be commit it
+- Overwrite the cornerstone files witth this template and will be commit it
+- Install the NPM packages
+
 ### README.md
 
 Edit this readme file and replace the `{JIRA-KEY}` keyword with related project key from Jira.
 
-### Cornerstone 6+ Only
+### Cornerstone 6.10+ Only
 
-* Setup Stencil CLI: `stencil init`. Enter the credentials.
-* Download the BigCommerce Cornerstone 6.10+ theme from the store: `stencil download`. Be sure the store has the latest version of Cornerstone.
+* Setup Stencil CLI: `stencil init` and enter the credentials.
 * Add these commands to the `package.json` file:
-    * `"dev": "stencil start -o"`. Start the stencil server and open the browser automatically.
-    * `"push": "stencil push -a -d -c 1"`. Push the theme to the live store and active it (only for stores in development mode).
-    * `"cy:open": "cypress open"`. Open cypress app and setup the environment.
-    * `"cy:run": "cypress run"`. Run cypress commands in the background.
-    * `"postinstall": "husky install"`. Run husky setup.
-* Install extra dependencies: `npm i -D husky @commitlint/config-conventional @commitlint/cli cypress eslint-plugin-cypress cli-color`
-
-Add the commands below in the scripts section of the `package.json`:
 
 ```json
 "dev": "stencil start -o",
