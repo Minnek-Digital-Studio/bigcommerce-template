@@ -29,9 +29,8 @@
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
     <li><a href="#installation-and-setup-guide">Installation and Setup Guide</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#contributing">Stack</a></li>
+    <li><a href="#stack">Stack</a></li>
   </ol>
 </details>
 
@@ -49,14 +48,19 @@ Project name description.
 <!-- INSTALLATION -->
 ## Installation and Setup Guide
 
+### README.md
+
+Edit this readme file and replace the `{JIRA-KEY}` keyword with related project key from Jira.
+
 ### Cornerstone 6+ Only
 
 * Setup Stencil CLI: `stencil init`. Enter the credentials.
-* Download the BigCommerce Cornerstone 6+ theme from the store: `stencil download`. Be sure the store has the latest version of Cornerstone.
+* Download the BigCommerce Cornerstone 6.10+ theme from the store: `stencil download`. Be sure the store has the latest version of Cornerstone.
 * Add these commands to the `package.json` file:
     * `"dev": "stencil start -o"`. Start the stencil server and open the browser automatically.
     * `"push": "stencil push -a -d -c 1"`. Push the theme to the live store and active it (only for stores in development mode).
     * `"cy:open": "cypress open"`. Open cypress app and setup the environment.
+    * `"cy:run": "cypress run"`. Run cypress commands in the background.
     * `"postinstall": "husky install"`. Run husky setup.
 * Install extra dependencies: `npm i -D husky @commitlint/config-conventional @commitlint/cli cypress eslint-plugin-cypress cli-color`
 * Install the theme dependencies: `npm install`
@@ -93,20 +97,6 @@ Project name description.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-<!-- ROADMAP -->
-## Roadmap
-
-Project roadmap planning, accomplishments and releases.
-
-- [ ] Project goal 1
-- [ ] Project goal 2
-- [ ] Project goal 3
-
-See the [open issues](https://minnek.atlassian.net/browse/{JIRA-ID}) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 <!-- CONTRIBUTING -->
 ## Contributing
 
@@ -123,8 +113,8 @@ If you have a suggestion that would make this better, create a pull request. You
 <!-- STACK -->
 ## Stack
 
-* Node.js 14
-* Stencil CLI 5+
+* Node.js 18
+* Stencil CLI 7+
 * ESLint
 * Stylelint
 * CommitLint (Conventional Commits)
