@@ -90,7 +90,7 @@ if [[ $platform == "bc" ]]; then
     echo "${GREEN}Installing node packages...${ENDCOLOR}"
     echo ""
 
-    npm i -D husky @commitlint/config-conventional @commitlint/cli cypress eslint-plugin-cypress cli-color
+    npm i -D husky @commitlint/config-conventional @commitlint/cli cypress eslint-plugin-cypress cli-color release-it @release-it/bumper @release-it/conventional-changelog
     echo ""
 
     git add package.json
