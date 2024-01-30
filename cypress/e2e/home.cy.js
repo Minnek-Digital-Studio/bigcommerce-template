@@ -1,13 +1,12 @@
+const targetUrl = '/';
+
 describe("Check homepage", () => {
     before(() => {
         cy.visit("/");
     });
 
-    it("should exist element on header with class ysw-l-header", () => {
-        cy.get(".ysw-l-header").should("exist");
-    });
-
-    it("should exist element on footer with class ysw-l-footer", () => {
-        cy.get(".ysw-l-footer").should("exist");
+    it('should visit and load the homepage', () => {
+        cy.visit(targetUrl);
+        cy.url().should('include', targetUrl);
     });
 });

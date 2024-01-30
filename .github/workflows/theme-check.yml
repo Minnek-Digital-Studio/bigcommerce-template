@@ -2,9 +2,11 @@ name: Theme Check
 
 on:
   pull_request:
-    branches: [ develop ]
+    branches: [ master ]
 
 jobs:
+  # for Wizards repositories setup
+  # change the path to: yourstorewizards/bigcommerce-action/.github/workflows/theme-check.yml@master
   theme_check:
     uses: Minnek-Digital-Studio/bigcommerce-action/.github/workflows/theme-check.yml@master
     secrets: inherit

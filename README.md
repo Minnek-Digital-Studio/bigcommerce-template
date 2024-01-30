@@ -65,16 +65,21 @@ This command will:
 
 Edit this readme file and replace the `{JIRA-KEY}` keyword with related project key from Jira.
 
-### Cornerstone 6.10+ Only
+### Cornerstone 6+ Only
 
 * Setup Stencil CLI: `stencil init` and enter the credentials.
 * Add these commands to the `package.json` file:
 
 ```json
-"dev": "stencil start -o",
-"push": "stencil push -a -d -c 1",
+"start:dev": "npm run start",
+"start": "stencil start -o --variation <variation-name>  -c 1",
+"push": "echo \"no\" | stencil push -c 1",
+"theme:check": "npx grunt check",
+"stylelint": "npx stylelint **/*.scss",
+"stylelint:fix": "npx stylelint --fix **/*.scss",
 "cy:open": "cypress open",
-"cy:run": "cypress run",
+"cy:run": "export \"$(grep -vE \"^(#.*|/s*)$\" .env)\"; npx cypress run --headless --record --key $CYPRESS_KEY --browser chrome",
+"release": "release-it",
 "postinstall": "husky install"
 ```
 
@@ -109,6 +114,29 @@ Edit this readme file and replace the `{JIRA-KEY}` keyword with related project 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### VSC
+
+Add this setup to the `settings.json` in the `.vscode` folder to highlight the handlebars files:
+
+```json
+{
+  "files.associations": {
+    "*.html": "handlebars"
+  }
+}
+```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+## Repository Settings
+
+- Create production environment to store the credentials for deployment using secrets:
+    - `URL` with the value of private storefront url
+    - `TOKEN` with value of Stencil CLI token with push scope
+- Create repository secrets for:
+    - `CYPRESS_KEY` with the value of key from cypress cloud
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 ## Contributing

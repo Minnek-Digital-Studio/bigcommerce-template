@@ -1,13 +1,14 @@
 name: Deployment
 
-on: 
+on:
   push:
     branches:
       - master
       - 'test/**'
 
 jobs:
+  # for Wizards repositories setup
+  # change the path to: yourstorewizards/bigcommerce-action/.github/workflows/deployment.yml@master
   deployment:
     uses: Minnek-Digital-Studio/bigcommerce-action/.github/workflows/deployment.yml@master
     secrets: inherit
-    

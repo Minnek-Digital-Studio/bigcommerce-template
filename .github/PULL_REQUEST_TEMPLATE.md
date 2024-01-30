@@ -1,8 +1,8 @@
-#### Issue Info
+## Issue Info
 
 [![Jira](https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=Jira&logoColor=white)](https://minnek.atlassian.net/browse/${ticket})
 
-### Code Review Checklist for Authors
+### For Authors
 
 - Update your branch with the latest changes from `develop`.
 - Verify all the `checks` are passed (if applicable).
@@ -11,7 +11,7 @@
 - No unintentional `console.logs` left behind after debugging.
 - Notify the code reviewers on time to have an efficient review time.
 
-### Code Review Checklist for Reviewers
+### For Reviewers
 
 - Take some time to understand the code you are reading.
 - Use an inquisitive tone, do not make an order.
@@ -20,7 +20,7 @@
 
 >**In case something is not applied, justify the reason why you skip one of the points above**
 
-#### Notes before Merge
+### Notes before Merge
 
 - Change pull request title to `Feature/Ticket-ID` to match the branch name. See the docs [here](https://github.com/Minnek-Digital-Studio/minnek-developer-handbook/blob/master/development/git-version-control.md#pull-request).
 - Write Short and Detailed Commit Messages. See the docs [here](https://github.com/Minnek-Digital-Studio/minnek-developer-handbook/blob/master/development/git-version-control.md#writing-commits).
