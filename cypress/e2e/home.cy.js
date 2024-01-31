@@ -1,12 +1,13 @@
+import { lang } from '../support/constants';
+
 const targetUrl = '/';
 
-describe("Check homepage", () => {
+describe('Check homepage', () => {
     before(() => {
-        cy.visit("/");
+        cy.visit('/', lang);
     });
 
     it('should visit and load the homepage', () => {
-        cy.visit(targetUrl);
         cy.url().should('include', targetUrl);
     });
 });
