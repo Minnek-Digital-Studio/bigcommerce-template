@@ -116,13 +116,21 @@ Edit this readme file and replace the `{JIRA-KEY}` keyword with related project 
 
 ### VSC
 
-Add this setup to the `settings.json` in the `.vscode` folder to highlight the handlebars files:
+* Add this setup to the `settings.json` in the `.vscode` folder to:
+
+1. Highlight the handlebars files
+2. Enable stylelint new version
 
 ```json
 {
   "files.associations": {
     "*.html": "handlebars"
-  }
+  },
+
+  "stylelint.validate": [
+    "css",
+    "scss"
+  ]
 }
 ```
 
