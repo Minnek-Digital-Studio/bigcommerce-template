@@ -1,73 +1,12 @@
-name: Cypress E2E Tests
+name: Cypress Tests
 
 on:
-  push:
-    branches:
-      - master
-      - 'test/**'
+  pull_request:
+    branches: [ master ]
 
 jobs:
-  changes_check:
-    runs-on: ubuntu-latest
-
-    outputs:
-      cypress: ${{ steps.changes.outputs.cypress }}
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Check Files Changed
-        id: changes
-        uses: dorny/paths-filter@v2
-        with:
-          filters: |
-            cypress:
-              - './templates/**'
-              - './assets/**'
-              - './lang/**'
-              - './config.json'
-
-  cypress-run:
-    runs-on: ubuntu-latest
-
-    if: needs.changes_check.outputs.cypress == 'true'
-    needs: changes_check
-
-    strategy:
-      fail-fast: false
-      matrix:
-        containers: [1, 2]
-        node: [18.x]
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-
-      - name: Use Node.js ${{ matrix.node }}
-        uses: actions/setup-node@v2-beta
-        with:
-          node-version: ${{ matrix.node }}
-
-      - name: NPM Cache
-        uses: actions/cache@v2
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install Stencil CLI Dependency
-        run: npm install -g @bigcommerce/stencil-cli
-
-      - name: Install Dependencies
-        run: npm install --legacy-peer-deps
-
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
-        with:
-          start: npm run start:dev
-          wait-on: 'http://localhost:3000'
-          record: true
-          parallel: true
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  # for Wizards repositories setup
+  # change the path to: yourstorewizards/bigcommerce-action/.github/workflows/cypress.yml@master
+  theme_check:
+    uses: Minnek-Digital-Studio/bigcommerce-action/.github/workflows/theme-check.yml@master
+    secrets: inherit
